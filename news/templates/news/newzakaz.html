@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <meta charset="windows-1251">
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+    <title>Регистрация нового заказа</title>
+</head>
+<body>
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a href="/news/">Новости</a>
+        <a class="active" href="/newzakaz/">Зарегистрировать посылку</a>
+        <a href="/newbox/">Подключиться к системе</a>
+    </div>
+    <div class="fig">
+        <h1><a href=""><img src="https://sun1-87.userapi.com/hXp6QjWmCLdBmceOkskE0BojYj8LZ8gjHOHZEQ/Yl22Lv0cqho.jpg" alt="альтернативный текст" width="480" height="135" border="0"><a href=""></a></h1>
+    </div>
+    <div>
+        <p>!!!Убедитесь что вы прочитали инструкцию для отправки!!!<br />В поле YouTown укажите город из которого вы будете отправлять посылку<br />В поле ArrivalTown укажите город в который посылка должна придти<br />Nick Recipient укажите ник получателя, а в You Nick укажи свой ник</p>
+    </div>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                <form method="POST" class="post-form">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="save btn btn-default">Создать заказ</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

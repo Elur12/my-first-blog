@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <meta charset="windows-1251">
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+    <title>Регистрация нового заказа</title>
+</head>
+<body>
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a href="/news/">Новости</a>
+        <a href="/newzakaz/">Зарегистрировать посылку</a>
+        <a class="active" href="/newbox/">Подключиться к системе</a>
+    </div>
+    <div class="id">
+        <p><br /><br />Id вашей бочки: {{town.id}}</p>
+    </div>
+</body>
+</html>

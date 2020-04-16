@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <meta charset="windows-1251">
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+    <title>Регистрация нового почтового ящика</title>
+</head>
+<body>
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a href="/news/">Новости</a>
+        <a href="/newzakaz/">Зарегистрировать посылку</a>
+        <a class="active" href="/newbox/">Подключиться к системе</a>
+    </div>
+    <div class="fig">
+        <h1><a href=""><img src="https://sun1-87.userapi.com/hXp6QjWmCLdBmceOkskE0BojYj8LZ8gjHOHZEQ/Yl22Lv0cqho.jpg" alt="альтернативный текст" width="480" height="135" border="0"></a></h1>
+    </div>
+    <div class="ggg">
+        <p>!!!Обезательно прочитайте инструкцию по регистрации бочки, чтобы потом админам нечего не исправлять!!!<br />В поле NAME запишите название вашего города.<br />В поле Text опишиье как добраться до почтового ящика как можно подробнее.<br /> !!!В поле coord запишите координаты бочки!!! Не города, а бочки.</p>
+    </div>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                <form method="POST" class="post-form">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="save btn btn-default" >Добавить почтовый ящик</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <meta charset="windows-1251">
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+    <title>Новости и обновления почты СПМ</title>
+</head>
+<body>
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a class="active" href="/news/">Новости</a>
+        <a href="/newzakaz/">Зарегистрировать посылку</a>
+        <a href="/newbox/">Подключиться к системе</a>
+    </div>
+    <div class="fig">
+        <h1><a href=""><img src="https://sun1-87.userapi.com/hXp6QjWmCLdBmceOkskE0BojYj8LZ8gjHOHZEQ/Yl22Lv0cqho.jpg" alt="альтернативный текст" width="480" height="135" border="0"><a href=""></a></h1>
+    </div>
+    {% for post in posts %}
+    <div>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.text}}</p>
+    </div>
+    {% endfor %}
+</body>
+</html>

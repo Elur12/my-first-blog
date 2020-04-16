@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <meta charset="windows-1251">
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+    <title>СПмини Post Office</title>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="">Home</a>
+        <a href="/news/">Новости</a>
+        <a href="/newzakaz/">Зарегистрировать посылку</a>
+        <a href="/newbox/">Подключиться к системе</a>
+    </div>
+    <div class="fig">
+        <h1><a href=""><img src="https://sun1-87.userapi.com/hXp6QjWmCLdBmceOkskE0BojYj8LZ8gjHOHZEQ/Yl22Lv0cqho.jpg" alt="альтернативный текст" width="960" height="270" border="0"><a href=""></a></h1>
+    </div>
+    <div class="ooo">
+        <p><br /><br /></p>
+        <h2>О нас</a></h2>
+        <p>Мы организация доставки на СПМ. <br /> Мы можем доставить вашу посылку с одного почтового ящика в другой. В будущем планируем переименоваться в SPуслуги. Наши работники доставят вашу посылку в указыный вами почтовый ящик. Вам потребуеться выполнить простые дейстрвия по инструкции, а дальше будут действовать наши почтальёны.</p>
+        <p><br /><br /></p>
+    </div>
+
+    <div>
+        <h2>Как отправить посылку</h2>
+        <p>• Найдите ближайший почтовый ящик(если нету почтового ящика зарегистрируйте на свой город новый почтовый ящик) <br />• <a href="/newzakaz/">Зайдите на сайт</a> и зарегистрируйте посылку получив код отслеживания.<br />• Переменуйте порох(5 пороха если это надо доставить предмет и 25 пороха если надо доставить шалкер) в ваш код отслеживания. <br />• Положите оплату вместе с предметом(и когда почтальён положит предмет в бочку получателя он рядом положит табличку с ником игрока кому преднозначена эта посылка)<p>
+        <p><br /><br /></p>
+    </div>
+    <div>
+        <h2>Как подключить свой город к почтовому сервису</h2>
+        <p><img src="https://sun1-93.userapi.com/cvS_bS7PoKd-24ZsncmPid6UsPlBI86fyXHYTQ/hwIr6kJlt60.jpg" alt="альтернативный текст" width="270" height="270" border="0"></p>
+        <p>• Возде своего города поставте бочку и заполни её примерно так. Верхний слой будет для отправленных сообщений, а нижний слой для входящих сообщений<br />• <a href="/newbox/">Зайдите на сайт</a> и заполнив все пропуски вы получита свой личнй ID который вы должны написать на табличке на бочке<p>
+        <p><br /><br /></p>
+    </div>
+    <div>
+        <h2><a href="/news/">Наши новости</a></h2>
+    </div>
+    <div>
+        <h3>{{ posts.title }}</h3>
+        <p>{{ posts.text}}</p>
+        <p><br /><br /></p>
+    </div>
+    <div class="page-header">
+        <p>Созданно только для игроков СПМ</p>
+    </div>
+</body>
+</html>
