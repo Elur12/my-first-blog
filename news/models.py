@@ -16,7 +16,7 @@ class Post(models.Model):
         return self.title
     class Meta:
         verbose_name = 'Пост'
-        verbose_name_plural = 'Почты'
+        verbose_name_plural = 'Поcты'
 
 class Town(models.Model):
     name = models.CharField(max_length=200)

@@ -6,23 +6,17 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <meta charset="windows-1251">
     <link rel="stylesheet" href="{% static 'css/news.css' %}">
-    <title>Новости и обновления почты СПМ</title>
+    <title>Регистрация нового заказа</title>
 </head>
 <body>
     <div class="topnav">
         <a href="/">Home</a>
-        <a class="active" href="/news/">Новости</a>
-        <a href="/newzakaz/">Зарегистрировать посылку</a>
+        <a href="/news/">Новости</a>
+        <a class="active" href="/newzakaz/">Зарегистрировать посылку</a>
         <a href="/newbox/">Подключиться к системе</a>
     </div>
-    <div class="fig">
-        <h1><a href=""><img src="https://sun1-83.userapi.com/PVgv1Sk1kcpeV4OXtDMiat3fgjb25Zs5X_G7bg/zInCb2i1ZfQ.jpg" alt="альтернативный текст" width="360" height="280" border="0"><a href=""></a></h1>
+    <div class="id">
+        <p><br /><br />Ваш код отслеживания: {{town.id}}</p>
     </div>
-    {% for post in posts %}
-    <div>
-        <h2>{{ post.title }}</h2>
-        <p>{{ post.text}}</p>
-    </div>
-    {% endfor %}
 </body>
 </html>
